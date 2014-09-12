@@ -1,7 +1,8 @@
 # RawRequest - A Simple Http Request Interface Class for PHP Applications
 
 ## Package Features
-- 
+- Provides an interface to the current HTTP request
+- Help with creating relative and absolute site urls
 
 ## Installation
 
@@ -31,6 +32,8 @@ Alternatively, just copy the contents of the RawRequest folder into somewhere th
 
 ```php
 <?php
+
+defined( 'BASE_URL' ) || define( 'BASE_URL', 'http://rawphp.org' );
 
 use RawPHP\RawRequest\Request;
 
