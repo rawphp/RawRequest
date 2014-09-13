@@ -40,6 +40,9 @@ use RawPHP\RawRequest\Request;
 // create new request instance
 $request = new Request( );
 
+// initialise request
+$request->init( );
+
 // get current route and params
 $route = $request->route;
 $params = $request->params;

@@ -68,23 +68,13 @@ class Request extends Component implements IRequest
     public $params;
     
     /**
-     * Request Constructor.
-     * 
-     * @param array $config configuration array
-     */
-    public function __construct( $config = array() )
-    {
-        parent::__construct( $config );
-        
-        $this->init( $config );
-    }
-    
-    /**
      * Initialises the request.
      * 
      * @param array $config optional configuration array
+     * 
+     * @action ON_REQUEST_INIT_ACTION
      */
-    public function init( $config )
+    public function init( $config = array( ) )
     {
         if ( isset( $_SERVER[ 'HTTP_USER_AGENT' ] ) )
         {
@@ -146,14 +136,22 @@ class Request extends Component implements IRequest
             
             array_shift( $elements );
         }
+        
+        $this->doAction( self::ON_REQUEST_INIT_ACTION );
     }
     
     /**
      * Creates a http url.
      * 
+     * This method has a dependency on two defines
+     *  1. TEST_LOCK_FILE - test lock file, define it as '/path/to/site/root/test.lock'
+     *  2. BASE_URL - this is the base url of your application, e.g, http://rawphp.org
+     * 
      * @param string $route    the route
      * @param array  $params   list of parameters (in the correct order)
      * @param bool   $absolute whether the url should be absolute
+     * 
+     * @filter ON_ROUTER_CREATE_URL_FILTER
      * 
      * @return string the url
      */
@@ -186,8 +184,12 @@ class Request extends Component implements IRequest
             }
         }
         
-        return $url;
+        return $this->filter( self::ON_ROUTER_CREATE_URL_FILTER, $url, $route, $params, $absolute );
     }
+    
+    const ON_REQUEST_INIT_ACTION       = 'on_init_action';
+    
+    const ON_ROUTER_CREATE_URL_FILTER   = 'on_create_url_filter';
     
     public static $httpCodes = array(
         100 => 'Continue',
@@ -228,8 +230,4 @@ class Request extends Component implements IRequest
         504 => 'Gateway Time-out',
         505 => 'HTTP Version not supported',
     );
-    
-    const ON_INIT_ACTION       = 'on_init_action';
-    
-    const ON_CREATE_URL_FILTER = 'on_create_url_filter';
 }
