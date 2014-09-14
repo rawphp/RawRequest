@@ -1,7 +1,7 @@
 {
     "name": "rawphp/raw-request",
     "type": "library",
-    "description": "RawRequest is a simple request class used by RawPHP and other applications and provides a useful interface to the HTTP request.",
+    "description": "RawRequest is a simple request class used by RawPHP framework and other applications and provides a useful interface to the HTTP request.",
     "keywords": [ "http", "request" ],
     "homepage": "http://rawphp.org",
     "license": "MIT",
