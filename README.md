@@ -1,5 +1,7 @@
 # RawRequest - A Simple Http Request Interface Class for PHP Applications
 
+[![Build Status](https://travis-ci.org/rawphp/RawRequest.svg?branch=master)](https://travis-ci.org/rawphp/RawRequest)
+
 ## Package Features
 - Provides an interface to the current HTTP request
 - Help with creating relative and absolute site urls
