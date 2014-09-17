@@ -76,6 +76,8 @@ class Request extends Component implements IRequest
      */
     public function init( $config = array( ) )
     {
+        parent::init( $config );
+        
         if ( isset( $_SERVER[ 'HTTP_USER_AGENT' ] ) )
         {
             $this->userAgent   = $_SERVER[ 'HTTP_USER_AGENT' ];
