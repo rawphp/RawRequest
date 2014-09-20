@@ -66,5 +66,8 @@ Please submit bug reports, suggestions and pull requests to the [GitHub issue tr
 
 ## Changelog
 
+#### 20-09-2014
+- Replaced php array configuration with yaml
+
 #### 12-09-2014
 - Initial Code Commit

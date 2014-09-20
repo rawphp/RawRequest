@@ -57,9 +57,9 @@ class RequestTest extends \PHPUnit_Framework_TestCase
     /**
      * Setup done before test suite run.
      */
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass( )
     {
-        parent::setUpBeforeClass();
+        parent::setUpBeforeClass( );
         
         touch( TEST_LOCK_FILE );
     }
@@ -67,7 +67,7 @@ class RequestTest extends \PHPUnit_Framework_TestCase
     /**
      * Cleanup done after test suite run.
      */
-    public static function tearDownAfterClass()
+    public static function tearDownAfterClass( )
     {
         parent::tearDownAfterClass();
         
@@ -82,13 +82,16 @@ class RequestTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->request = new Request();
+        global $config;
+        
+        $this->request = new Request( );
+        $this->request->init( $config );
     }
     
     /**
      * Test creating a relative url.
      */
-    public function testCreateRelativeUrl()
+    public function testCreateRelativeUrl( )
     {
         $route    = 'home';
         $expected = 'home';
@@ -116,7 +119,7 @@ class RequestTest extends \PHPUnit_Framework_TestCase
     /**
      * Test creating an absolute url.
      */
-    public function testCreateAbsoluteUrl()
+    public function testCreateAbsoluteUrl( )
     {
         $route    = 'home';
         $expected = BASE_URL . 'home';

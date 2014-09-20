@@ -33,13 +33,18 @@
  * @link      http://rawphp.org/
  */
 
+use RawPHP\RawYaml\Yaml;
+
 defined( 'DS' )             || define( 'DS', DIRECTORY_SEPARATOR );
 
 defined( 'BASE_URL' )       || define( 'BASE_URL', 'http://rawphp/' );
 
 defined( 'OUTPUT_DIR' )     || define( 'OUTPUT_DIR', dirname( __FILE__ ) . DS . '_output' . DS );
+defined( 'SUPPORT_DIR' )    || define( 'SUPPORT_DIR', dirname( __FILE__ ) . DS . '_support' . DS );
 defined( 'TEST_LOCK_FILE' ) || define( 'TEST_LOCK_FILE', OUTPUT_DIR . 'test.lock' );
 
 require_once dirname( dirname( __FILE__ ) ) . DS . 'vendor' . DS . 'autoload.php';
+
+$config = ( new Yaml( ) )->load( SUPPORT_DIR . 'config.yml' );
 
 echo PHP_EOL . PHP_EOL . '************* BOOTSTRAP ********************' . PHP_EOL . PHP_EOL;
