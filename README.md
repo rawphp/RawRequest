@@ -1,6 +1,6 @@
 # RawRequest - A Simple Http Request Interface Class for PHP Applications
 
-[![Build Status](https://travis-ci.org/rawphp/RawRequest.svg?branch=master)](https://travis-ci.org/rawphp/RawRequest) [![Coverage Status](https://coveralls.io/repos/rawphp/RawRequest/badge.png)](https://coveralls.io/r/rawphp/RawRequest)
+[![Build Status](https://travis-ci.org/rawphp/RawRequest.svg?branch=master)](https://travis-ci.org/rawphp/RawRequest) [![Coverage Status](https://coveralls.io/repos/rawphp/RawRequest/badge.png?branch=master)](https://coveralls.io/r/rawphp/RawRequest?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/rawphp/raw-request/v/stable.svg)](https://packagist.org/packages/rawphp/raw-request) [![Total Downloads](https://poser.pugx.org/rawphp/raw-request/downloads.svg)](https://packagist.org/packages/rawphp/raw-request) 
 [![Latest Unstable Version](https://poser.pugx.org/rawphp/raw-request/v/unstable.svg)](https://packagist.org/packages/rawphp/raw-request) [![License](https://poser.pugx.org/rawphp/raw-request/license.svg)](https://packagist.org/packages/rawphp/raw-request)
 
@@ -68,7 +68,7 @@ Please submit bug reports, suggestions and pull requests to the [GitHub issue tr
 
 ## Changelog
 
-#### 20-09-2014
+#### 22-09-2014
 - Tested to PHP 5.3.
 
 #### 20-09-2014
