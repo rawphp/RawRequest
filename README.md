@@ -1,6 +1,8 @@
-# RawRequest - A Simple Http Request Interface Class for PHP Applications [![Build Status](https://travis-ci.org/rawphp/RawRequest.svg?branch=master)](https://travis-ci.org/rawphp/RawRequest)
+# RawRequest - A Simple Http Request Interface Class for PHP Applications
 
-[![Latest Stable Version](https://poser.pugx.org/rawphp/raw-request/v/stable.svg)](https://packagist.org/packages/rawphp/raw-request) [![Total Downloads](https://poser.pugx.org/rawphp/raw-request/downloads.svg)](https://packagist.org/packages/rawphp/raw-request) [![Latest Unstable Version](https://poser.pugx.org/rawphp/raw-request/v/unstable.svg)](https://packagist.org/packages/rawphp/raw-request) [![License](https://poser.pugx.org/rawphp/raw-request/license.svg)](https://packagist.org/packages/rawphp/raw-request)
+[![Build Status](https://travis-ci.org/rawphp/RawRequest.svg?branch=master)](https://travis-ci.org/rawphp/RawRequest) [![Coverage Status](https://coveralls.io/repos/rawphp/RawRequest/badge.png)](https://coveralls.io/r/rawphp/RawRequest)
+[![Latest Stable Version](https://poser.pugx.org/rawphp/raw-request/v/stable.svg)](https://packagist.org/packages/rawphp/raw-request) [![Total Downloads](https://poser.pugx.org/rawphp/raw-request/downloads.svg)](https://packagist.org/packages/rawphp/raw-request) 
+[![Latest Unstable Version](https://poser.pugx.org/rawphp/raw-request/v/unstable.svg)](https://packagist.org/packages/rawphp/raw-request) [![License](https://poser.pugx.org/rawphp/raw-request/license.svg)](https://packagist.org/packages/rawphp/raw-request)
 
 ## Package Features
 - Provides an interface to the current HTTP request
@@ -65,6 +67,9 @@ This package is licensed under the [MIT](https://github.com/rawphp/RawRequest/bl
 Please submit bug reports, suggestions and pull requests to the [GitHub issue tracker](https://github.com/rawphp/RawRequest/issues).
 
 ## Changelog
+
+#### 20-09-2014
+- Tested to PHP 5.3.
 
 #### 20-09-2014
 - Replaced php array configuration with yaml
