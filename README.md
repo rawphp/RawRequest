@@ -4,6 +4,8 @@
 [![Latest Stable Version](https://poser.pugx.org/rawphp/raw-request/v/stable.svg)](https://packagist.org/packages/rawphp/raw-request) [![Total Downloads](https://poser.pugx.org/rawphp/raw-request/downloads.svg)](https://packagist.org/packages/rawphp/raw-request) 
 [![Latest Unstable Version](https://poser.pugx.org/rawphp/raw-request/v/unstable.svg)](https://packagist.org/packages/rawphp/raw-request) [![License](https://poser.pugx.org/rawphp/raw-request/license.svg)](https://packagist.org/packages/rawphp/raw-request)
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/0be0d683-3464-44b3-b45d-baa4d8881f67/big.png)](https://insight.sensiolabs.com/projects/0be0d683-3464-44b3-b45d-baa4d8881f67)
+
 ## Package Features
 - Provides an interface to the current HTTP request
 - Help with creating relative and absolute site urls
