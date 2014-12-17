@@ -26,28 +26,29 @@
  * PHP version 5.3
  *
  * @category  PHP
- * @package   RawPHP/RawRequest/Tests
- * @author    Tom Kaczohca <tom@rawphp.org>
+ * @package   RawPHP\RawRequest\Tests
+ * @author    Tom Kaczocha <tom@rawphp.org>
  * @copyright 2014 Tom Kaczocha
  * @license   http://rawphp.org/license.txt MIT
  * @link      http://rawphp.org/
  */
 
-namespace RawPHP\RawRequest;
+namespace RawPHP\RawRequest\Tests;
 
+use PHPUnit_Framework_TestCase;
 use RawPHP\RawRequest\Request;
 
 /**
  * The request tests.
  *
  * @category  PHP
- * @package   RawPHP/RawRequest/Tests
- * @author    Tom Kaczohca <tom@rawphp.org>
+ * @package   RawPHP\RawRequest\Tests
+ * @author    Tom Kaczocha <tom@rawphp.org>
  * @copyright 2014 Tom Kaczocha
  * @license   http://rawphp.org/license.txt MIT
  * @link      http://rawphp.org/
  */
-class RequestTest extends \PHPUnit_Framework_TestCase
+class RequestTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @var Request
@@ -57,9 +58,9 @@ class RequestTest extends \PHPUnit_Framework_TestCase
     /**
      * Setup done before test suite run.
      */
-    public static function setUpBeforeClass( )
+    public static function setUpBeforeClass()
     {
-        parent::setUpBeforeClass( );
+        parent::setUpBeforeClass();
 
         touch( TEST_LOCK_FILE );
     }
@@ -67,7 +68,7 @@ class RequestTest extends \PHPUnit_Framework_TestCase
     /**
      * Cleanup done after test suite run.
      */
-    public static function tearDownAfterClass( )
+    public static function tearDownAfterClass()
     {
         parent::tearDownAfterClass();
 
@@ -80,7 +81,7 @@ class RequestTest extends \PHPUnit_Framework_TestCase
     /**
      * Setup done before each test.
      */
-    protected function setUp( )
+    protected function setUp()
     {
         global $config;
 
@@ -90,56 +91,56 @@ class RequestTest extends \PHPUnit_Framework_TestCase
     /**
      * Test creating a relative url.
      */
-    public function testCreateRelativeUrl( )
+    public function testCreateRelativeUrl()
     {
         $route    = 'home';
         $expected = 'home';
-        $result = $this->request->createUrl( $route );
+        $result   = $this->request->createUrl( $route );
         $this->assertEquals( $expected, $result );
 
         $route    = 'home/index';
         $expected = 'home/index';
-        $result = $this->request->createUrl( $route );
+        $result   = $this->request->createUrl( $route );
         $this->assertEquals( $expected, $result );
 
         $route    = 'home/index';
-        $params   = array( 1 );
+        $params   = [ 1 ];
         $expected = 'home/index/1';
-        $result = $this->request->createUrl( $route, $params );
+        $result   = $this->request->createUrl( $route, $params );
         $this->assertEquals( $expected, $result );
 
         $route    = 'home/index';
-        $params   = array( 1, 123456789 );
+        $params   = [ 1, 123456789 ];
         $expected = 'home/index/1/123456789';
-        $result = $this->request->createUrl( $route, $params );
+        $result   = $this->request->createUrl( $route, $params );
         $this->assertEquals( $expected, $result );
     }
 
     /**
      * Test creating an absolute url.
      */
-    public function testCreateAbsoluteUrl( )
+    public function testCreateAbsoluteUrl()
     {
         $route    = 'home';
         $expected = BASE_URL . 'home';
-        $result = $this->request->createUrl( $route, NULL, TRUE );
+        $result   = $this->request->createUrl( $route, NULL, TRUE );
         $this->assertEquals( $expected, $result );
 
         $route    = 'home/index';
         $expected = BASE_URL . 'home/index';
-        $result = $this->request->createUrl( $route, NULL, TRUE );
+        $result   = $this->request->createUrl( $route, NULL, TRUE );
         $this->assertEquals( $expected, $result );
 
         $route    = 'home/index';
-        $params   = array( 1 );
+        $params   = [ 1 ];
         $expected = BASE_URL . 'home/index/1';
-        $result = $this->request->createUrl( $route, $params, TRUE );
+        $result   = $this->request->createUrl( $route, $params, TRUE );
         $this->assertEquals( $expected, $result );
 
         $route    = 'home/index';
-        $params   = array( 1, 123456789 );
+        $params   = [ 1, 123456789 ];
         $expected = BASE_URL . 'home/index/1/123456789';
-        $result = $this->request->createUrl( $route, $params, TRUE );
+        $result   = $this->request->createUrl( $route, $params, TRUE );
         $this->assertEquals( $expected, $result );
     }
 }
